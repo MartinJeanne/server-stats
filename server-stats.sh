@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "\e[34mServer usage\e[0m"
+echo -e "\e[34mServer usage:\e[0m"
 # make two iteration of top, keep %Cpu(s) line, keep the id part, 100-free cpu%
 top -bn2 | grep "%Cpu(s):" | cut -d ',' -f 4 | tail -n 1 | awk '{print "CPU: " 100-$1 "%"}'
 
